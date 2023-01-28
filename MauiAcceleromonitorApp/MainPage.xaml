@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAcceleromonitorApp.MainPage"
+             xmlns:customcomponents="clr-namespace:MauiAcceleromonitorApp.CustomComponents">
+
+    <ContentPage.Resources>
+        <x:Double x:Key="GraphWidth">150</x:Double>
+        <x:Double x:Key="GraphHeight">200</x:Double>
+        <Color x:Key="ColorX">Blue</Color>
+        <Color x:Key="ColorY">Green</Color>
+        <Color x:Key="ColorZ">Red</Color>
+        <x:Double x:Key="LegendFontSize">24</x:Double>
+        <x:Double x:Key="TickFontSize">24</x:Double>
+        <x:Double x:Key="StrokeSize">2</x:Double>
+        <Color x:Key="LightAxesColor">Black</Color>
+        <Color x:Key="DarkAxesColor">White</Color>
+    </ContentPage.Resources>
+
+    <StackLayout VerticalOptions="Center">
+    <Grid RowDefinitions="*, *"
+          ColumnDefinitions="*, *"
+          Margin="30"
+          Padding="10">
+
+        <Grid.Resources>
+            <Style TargetType="customcomponents:TemporalGraph">
+                <Setter Property="WidthRequest" Value="{StaticResource GraphWidth}"/>
+                <Setter Property="HeightRequest" Value="{StaticResource GraphHeight}"/>
+            </Style>
+        </Grid.Resources>
+
+            <customcomponents:TemporalGraph x:Name="graphx"
+                                        MyLabel="X"
+                                        MyColor="{StaticResource ColorX}"
+                                        MyFontSize="{StaticResource TickFontSize}"
+                                        MyStrokeSize="{StaticResource StrokeSize}"
+                                        Grid.Row="0"
+                                        Grid.Column="0"/>
+
+            <customcomponents:TemporalGraph x:Name="graphy"
+                                        MyLabel="Y"
+                                        MyColor="{StaticResource ColorY}"
+                                        MyFontSize="{StaticResource TickFontSize}"
+                                        MyStrokeSize="{StaticResource StrokeSize}"
+                                        Grid.Row="0"
+                                        Grid.Column="1"/>
+
+        <customcomponents:TemporalGraph x:Name="graphz"
+                                        MyLabel="Z"
+                                        MyColor="{StaticResource ColorZ}"
+                                        MyFontSize="{StaticResource TickFontSize}"
+                                        MyStrokeSize="{StaticResource StrokeSize}"
+                                        Grid.Row="1"
+                                        Grid.Column="0"/>
+
+        <VerticalStackLayout VerticalOptions="Center"
+                             Grid.Row="1" Grid.Column="1">
+
+            <VerticalStackLayout.Resources>
+                <Style TargetType="Rectangle">
+                    <Setter Property="WidthRequest" Value="30"/>
+                    <Setter Property="HeightRequest" Value="30"/>
+                </Style>
+
+                <Style TargetType="HorizontalStackLayout">
+                    <Setter Property="Margin" Value="20"/>
+                    <Setter Property="Spacing" Value="10"/>
+                    <Setter Property="HorizontalOptions" Value="Center"/>
+                </Style>
+
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="{StaticResource LegendFontSize}"/>
+                </Style>
+            </VerticalStackLayout.Resources>
+            
+            <HorizontalStackLayout>
+                <Rectangle Fill="{StaticResource ColorX}"/>
+                <Label Text="X-axis"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Rectangle Fill="{StaticResource ColorY}"/>
+                <Label Text="Y-axis"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Rectangle Fill="{StaticResource ColorZ}"/>
+                <Label Text="Z-axis"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+        
+    </Grid>
+    </StackLayout>
+</ContentPage>
