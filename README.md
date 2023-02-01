@@ -35,7 +35,7 @@ async Task UpdateXYZGraphs(TemporalGraph graphx, TemporalGraph graphy, TemporalG
 }
 ```
 
-### Responsive design for system theme
+### Responsive design based on system theme
 
 We can obtain the current theme (Dark/Light) of a device by Application.Current.RequestedTheme property. Based on the value, responsive color setting can be implimented for instance. 
 
