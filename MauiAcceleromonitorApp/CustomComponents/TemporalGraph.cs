@@ -48,7 +48,6 @@ namespace MauiAcceleromonitorApp.CustomComponents
 
         public TemporalGraph()
         {
-            Debug.Print("Hi");
 
             // Set drawable function
             this.Drawable = new GraphDrawable(this);
