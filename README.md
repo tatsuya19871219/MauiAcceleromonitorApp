@@ -4,10 +4,10 @@ An application that displays the temporal graph of accelaration data aquired via
 
 ## Files edited
  - CustomComponents/
-     - [TemporalGraph.cs](./CustomComponents/TemporalGraph.cs)
- - [AccelarationRecorder.cs](./AccelarationRecorder.cs)
- - [MainPage.xaml](./MainPage.xaml)
- - [MainPage.xaml.cs](./MainPage.xaml.cs)
+     - [TemporalGraph.cs](./MauiAcceleromonitorApp/CustomComponents/TemporalGraph.cs)
+ - [AccelarationRecorder.cs](./MauiAcceleromonitorApp/AccelarationRecorder.cs)
+ - [MainPage.xaml](./MauiAcceleromonitorApp/MainPage.xaml)
+ - [MainPage.xaml.cs](./MauiAcceleromonitorApp/MainPage.xaml.cs)
 
 ## What I learnt fron the project
 
