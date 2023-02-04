@@ -2,6 +2,13 @@
 
 An application that displays the temporal graph of accelaration data aquired via the pure functionality of MAUI.
 
+## Files edited
+ - CustomComponents/
+     - [TemporalGraph.cs](./CustomComponents/TemporalGraph.cs)
+ - [AccelarationRecorder.cs](./AccelarationRecorder.cs)
+ - [MainPage.xaml](./MainPage.xaml)
+ - [MainPage.xaml.cs](./MainPage.xaml.cs)
+
 ## What I learnt fron the project
 
 - How to get information from device sensors
